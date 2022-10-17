@@ -2,28 +2,31 @@
 <html>
 	<head>
 		<title>Staring Eyeball</title>
-		<link href='style.css' rel='stylesheet'>
-    
+<!--Defualt sylesheet--><link rel="stylesheet" href='style.css'>
+<!--Mobile sylesheet--><link rel="stylesheet" media="screen and (max-device-width: 900px)" href='mobstyle.css'>
 </head>
-
-
 <body>
+<!-- Logo ---------------------------->    
 	<div id="Logo">
-	<a href="/" title="Staring Eyeball"><img src="images/logo.png" alt="Staring Eyeball" height="56" /></a>
+	   <a href="/" title="Staring Eyeball"><img src="images/logo.png" alt="Staring Eyeball" height="56" /></a>
 	</div>
     
+<!-- Pillar Button For Sidebar ------->    
+   <button id="pillars" type="button">
+        <span class="pillar-box">
+            <span class="pillar-inside"><div class="pill"></div><div class="pill"></div><div class="pill"></div></span>
+        </span>
+    </button>
     
-    
-	<label class="switch">
+<!-- Sidebar -------------------------> 
+	<div id="Sidebar">
         
-  <input type="checkbox" class="toggle" value="Theme Toggle">
+        <!-- Eyeball Light Switch ---->   
+	<label class="switch">
+        <input type="checkbox" class="toggle" value="Theme Toggle">
         <span id="eyeball"></span>
     </label>
-    
-    	
-     <script src="scripts/theme.js"></script>
-    
-	<div id="Sidebar">
+        
 		<p>By <strong>Marcus Tullius Cicero</strong></p>
 	
 		<ul >
@@ -38,37 +41,44 @@
 		<img id="Cicero" src="images/cicero.png" alt="It's Cicero" width=130px; />
         <p id="Quote">Cicero pro domo sua!</p>
 	</div>
+    
+<!-- Content ------------------------->
+       <div id="Content">
+           <div class="Story">
+               <h2>LATIN LIVES, IT'S JUST BECOME PLACEHOLDER</h2>
+               <h4>XVIII II XLVIII</h4>
+                <p>Miror, si Cicero mens nobis, post annos bis mille, philosophorum studiorum excerptis utens ob id ipsum quod nos non intelligimus?</p>
+                <p>Nimis malum mortuus est.</p>
+           </div>
 		
-	<div id="Content">
-
-		<div class="Story">
-		<h2>LATIN LIVES, IT'S JUST BECOME PLACEHOLDER</h2>
-            <h4>XVIII II XLVIII</h4>
-		<p>Miror, si Cicero mens nobis, post annos bis mille, philosophorum studiorum excerptis utens ob id ipsum quod nos non intelligimus?</p>
-		<p>Nimis malum mortuus est.</p>
-		</div>
-		
-		<div class="Story">
-		<h2>ETIAM NON ALIQUAM</h2>
-            <h4>XIX I XLVIII</h4>
-		<p>Phasellus rutrum fringilla porta. Morbi vel pharetra quam. Pellentesque enim nunc, venenatis nec nulla non, pretium egestas tortor. Etiam lacinia urna et scelerisque pulvinar. Duis sed arcu at ante blandit porta ac eleifend massa. Integer urna eros, facilisis at dictum nec, laoreet ac diam. Proin vestibulum enim vel scelerisque tempus. Sed lobortis elit vel tortor fermentum, a bibendum lectus pharetra. In tempus pulvinar nisl a pretium. Morbi hendrerit sed mauris ac maximus. Vivamus eget eleifend sem, ut maximus ex. Mauris pulvinar, velit id iaculis varius, nunc dolor luctus justo, non ullamcorper augue neque non enim. Nulla efficitur tellus sed mi aliquam, sit amet viverra erat ultricies. Nulla neque nisi, eleifend semper ante id, sollicitudin rutrum turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+           <div class="Story">
+               <h2>ETIAM NON ALIQUAM</h2>
+               <h4>XIX I XLVIII</h4>
+               <p>Phasellus rutrum fringilla porta. Morbi vel pharetra quam. Pellentesque enim nunc, venenatis nec nulla non, pretium egestas tortor. Etiam lacinia urna et scelerisque pulvinar. Duis sed arcu at ante blandit porta ac eleifend massa. Integer urna eros, facilisis at dictum nec, laoreet ac diam. Proin vestibulum enim vel scelerisque tempus. Sed lobortis elit vel tortor fermentum, a bibendum lectus pharetra. In tempus pulvinar nisl a pretium. Morbi hendrerit sed mauris ac maximus. Vivamus eget eleifend sem, ut maximus ex. Mauris pulvinar, velit id iaculis varius, nunc dolor luctus justo, non ullamcorper augue neque non enim. Nulla efficitur tellus sed mi aliquam, sit amet viverra erat ultricies. Nulla neque nisi, eleifend semper ante id, sollicitudin rutrum turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             
-        <p>Fusce sed nisi eu augue dignissim fringilla ac pretium erat. Donec congue, est in facilisis bibendum, magna tortor bibendum tellus, sit amet lacinia ex odio id mauris. Quisque posuere urna vel cursus congue. Nulla diam mi, viverra a eros eu, rutrum congue augue. Donec efficitur lacus ac neque vestibulum congue. Fusce at ultricies magna. Suspendisse euismod maximus orci id pulvinar. Sed et sem vel felis luctus varius nec quis metus. Sed tincidunt vitae risus et hendrerit. Praesent non dictum arcu.</p>
-		</div>
+               <p>Fusce sed nisi eu augue dignissim fringilla ac pretium erat. Donec congue, est in facilisis bibendum, magna tortor bibendum tellus, sit amet lacinia ex odio id mauris. Quisque posuere urna vel cursus congue. Nulla diam mi, viverra a eros eu, rutrum congue augue. Donec efficitur lacus ac neque vestibulum congue. Fusce at ultricies magna. Suspendisse euismod maximus orci id pulvinar. Sed et sem vel felis luctus varius nec quis metus. Sed tincidunt vitae risus et hendrerit. Praesent non dictum arcu.</p>
+           </div>
 		
-		<div class="Story">
-		<h2>QUIS ELEIFEND</h2>
-            <h4>XIII I XLVIII</h4>
-		<p>Duis viverra scelerisque urna, vel faucibus neque ornare eget. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vel molestie felis. Nullam ullamcorper, elit at iaculis bibendum, risus dui mollis ligula, quis venenatis libero quam ut tellus. Vestibulum sit amet cursus ligula. Aenean a augue eget arcu suscipit tincidunt. Fusce ex justo, eleifend vel ipsum quis, accumsan rhoncus erat. Suspendisse potenti. Curabitur interdum leo sit amet metus porttitor dictum. Nulla malesuada vitae enim at facilisis. In malesuada, sapien nec congue feugiat, lectus lorem blandit dolor, quis ullamcorper mauris leo non nibh. Mauris nunc leo, auctor non lectus vel, hendrerit porta neque. Aliquam id dui ut nulla ornare consectetur.</p>
+           <div class="Story">
+               <h2>QUIS ELEIFEND</h2>
+               <h4>XIII I XLVIII</h4>
+               <p>Duis viverra scelerisque urna, vel faucibus neque ornare eget. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vel molestie felis. Nullam ullamcorper, elit at iaculis bibendum, risus dui mollis ligula, quis venenatis libero quam ut tellus. Vestibulum sit amet cursus ligula. Aenean a augue eget arcu suscipit tincidunt. Fusce ex justo, eleifend vel ipsum quis, accumsan rhoncus erat. Suspendisse potenti. Curabitur interdum leo sit amet metus porttitor dictum. Nulla malesuada vitae enim at facilisis. In malesuada, sapien nec congue feugiat, lectus lorem blandit dolor, quis ullamcorper mauris leo non nibh. Mauris nunc leo, auctor non lectus vel, hendrerit porta neque. Aliquam id dui ut nulla ornare consectetur.</p>
 			
-		<p>Morbi ut gravida diam. Phasellus porta, nibh id pretium auctor, velit nulla lacinia magna, vitae pulvinar nulla augue id felis. Etiam in aliquam tellus. Donec aliquam, sem sit amet dictum vestibulum, tortor erat tristique felis, a ultrices mi purus ac quam. In dui mauris, sodales nec purus non, dictum bibendum odio. Quisque blandit quis dui ut condimentum. Ut tincidunt enim eu nibh posuere, vitae interdum justo commodo. Nullam eleifend sem et nulla porttitor aliquet. Fusce vel molestie elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent rutrum varius velit. Duis nunc nisi, tempus sit amet urna eu, elementum ullamcorper felis. Sed volutpat erat magna, eget accumsan sem ullamcorper vel. Aenean ut mauris a nunc aliquam porta. Integer condimentum mauris quis scelerisque facilisis. Mauris a turpis eget massa facilisis ornare ut vitae libero.</p>
+               <p>Morbi ut gravida diam. Phasellus porta, nibh id pretium auctor, velit nulla lacinia magna, vitae pulvinar nulla augue id felis. Etiam in aliquam tellus. Donec aliquam, sem sit amet dictum vestibulum, tortor erat tristique felis, a ultrices mi purus ac quam. In dui mauris, sodales nec purus non, dictum bibendum odio. Quisque blandit quis dui ut condimentum. Ut tincidunt enim eu nibh posuere, vitae interdum justo commodo. Nullam eleifend sem et nulla porttitor aliquet. Fusce vel molestie elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent rutrum varius velit. Duis nunc nisi, tempus sit amet urna eu, elementum ullamcorper felis. Sed volutpat erat magna, eget accumsan sem ullamcorper vel. Aenean ut mauris a nunc aliquam porta. Integer condimentum mauris quis scelerisque facilisis. Mauris a turpis eget massa facilisis ornare ut vitae libero.</p>
 			
-		<p>Vestibulum ut velit maximus, auctor felis a, eleifend nisl. Pellentesque metus lectus, euismod venenatis orci ac, dapibus cursus elit. Nulla facilisi. Pellentesque lobortis lectus quam, ut scelerisque dui placerat eu. Nunc ante purus, volutpat id erat at, commodo bibendum felis. Sed egestas tortor vitae quam facilisis congue. Aenean facilisis lectus in est cursus, ut viverra lacus consequat. In vehicula vulputate velit sit amet consequat. Proin pretium quam arcu, quis interdum ex finibus non. Suspendisse at ipsum id lectus imperdiet bibendum. Aliquam et blandit turpis, sed auctor lorem. In facilisis dictum aliquam. Cras purus mauris, blandit at purus non, cursus efficitur purus.</p>
-		</div>
+               <p>Vestibulum ut velit maximus, auctor felis a, eleifend nisl. Pellentesque metus lectus, euismod venenatis orci ac, dapibus cursus elit. Nulla facilisi. Pellentesque lobortis lectus quam, ut scelerisque dui placerat eu. Nunc ante purus, volutpat id erat at, commodo bibendum felis. Sed egestas tortor vitae quam facilisis congue. Aenean facilisis lectus in est cursus, ut viverra lacus consequat. In vehicula vulputate velit sit amet consequat. Proin pretium quam arcu, quis interdum ex finibus non. Suspendisse at ipsum id lectus imperdiet bibendum. Aliquam et blandit turpis, sed auctor lorem. In facilisis dictum aliquam. Cras purus mauris, blandit at purus non, cursus efficitur purus.</p>
+           </div>
 
             
-    </div>
-   
-</body>
+       </div> <!--End of Content ----->
+    
+   <!-- Footer -------------------------->           
+    <div class="Footer"> <p><em>Eyeball up at the latin and not down at this footer. Try to make sense of what you see, and wonder about what makes it so. Be curious.</em> - <strong>Stefan Gawking</strong>, 'Optical Philospher'</p></div>
+    
+    
+    <!-- Link to JS ---------------------->     
+     <script src="scripts/theme.js"></script>
+    
+    </body>
 
 </html>

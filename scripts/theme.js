@@ -8,5 +8,19 @@ eye.addEventListener("click", cMode);
 
 //The function cMode toggles the CSS light-mode on/off
 function cMode() {
-document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("light-mode");
+}
+
+
+
+
+//Turns the button into an object
+const pill = document.getElementById("pillars");
+
+//Makes the button clickable and triggers the toggle
+pill.addEventListener("click", toggleSideBar);
+
+//The toggle for side-bar-on CSS
+function toggleSideBar() {
+    document.body.classList.toggle("sidebon");
 }

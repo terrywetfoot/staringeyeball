@@ -1,26 +1,64 @@
-
 body {
     display: grid;
-    grid-template-columns: [left-side]1fr [sidebar]1fr [content-col]2fr [right-side]1fr;
+    grid-template-columns: [left-side]auto [sidebar]0px [content-col]1fr [right-side]auto;
     grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
     grid-gap:5px 10px;
     
     color:lightgrey;
     background-color:#4a525a;
     font-family:sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.8em;
     padding:0;
     margin:0;
 } 
 
-#pillars {
-    visibility:hidden;
+body.sidebon {
+    transition: .3s;
+    display: grid;
+    grid-template-columns: [left-side]auto [sidebar].4fr [content-col]1fr [right-side]auto;
+    grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
+    grid-gap:5px 10px;
+    
+    color:lightgrey;
+    background-color:#4a525a;
+    font-family:sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.8em;
+    padding:0;
+    margin:0;
 }
+
+.light-mode.sidebon {
+  background: rgb(242 242 255);
+  color: rgb(30 30 40);
+}
+/*--Pillars not a hamburger; This is Ancient Rome. --*/
+#pillars {
+    grid-row: 2;
+    visibility: visible;
+    padding: 10px;
+    margin: right;
+}
+
+.pillar-box{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1;
+    width: 30px;
+    height: 30px;
+}
+
+.pill {
+    background: lightgrey;
+    width: 5px;
+    height: 25px;
+    margin: px 0;
+}
+
 
 /*--eyeball start----------*/ 
 .switch{
- 
     position: sticky;
     top:60px;
 } 
@@ -41,6 +79,7 @@ body {
 
 
 #eyeball {
+    margin: left;
     position: absolute;
     cursor: none;
     background: inherit;
@@ -101,8 +140,16 @@ body {
 }
 
 /*--Sidebar Start----------*/
-
 #Sidebar {
+    visibility:hidden;
+    grid-column: 2;
+    grid-row: 3;
+    opacity:0;
+    font-size: .8rem;
+    
+}
+
+.sidebon #Sidebar {
     visibility: visible;
     padding-top: 1px;
     padding-right: 40px;
@@ -110,6 +157,7 @@ body {
     grid-row: 3;
     opacity:.9;
     border: 0;
+    word-wrap: break-word;
     text-align: right;
 }
 
@@ -119,6 +167,7 @@ body {
     padding: 30px 0px 60px 40px;
     letter-spacing: 2px;
     border:0;
+    
 
 }
 
