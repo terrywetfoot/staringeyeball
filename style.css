@@ -1,15 +1,15 @@
 
 body {
     display: grid;
-    grid-template-columns: [left-side]1fr [sidebar]1fr [content-col]2fr [right-side]1fr;
+    grid-template-columns: [left-side]1fr [sidebar].8fr [content-col]1.3fr [right-side]1fr;
     grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
     grid-gap:5px 10px;
     
     color:lightgrey;
     background-color:#4a525a;
     font-family:sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8em;
+    font-size: 1rem;
+    line-height: 2rem;
     padding:0;
     margin:0;
 } 
@@ -163,7 +163,7 @@ h2:hover {
 #Content{
     grid-column: 3;
     grid-row: 3;
-    font-size:1.5rem;
+    
     
 }
 
