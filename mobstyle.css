@@ -14,19 +14,9 @@ body {
 } 
 
 body.sidebon {
-    transition: .3s;
-    display: grid;
     grid-template-columns: [left-side]auto [sidebar].4fr [content-col]1fr [right-side]auto;
-    grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
-    grid-gap:5px 10px;
-    
-    color:lightgrey;
-    background-color:#4a525a;
-    font-family:sans-serif;
-    font-size: 1.4rem;
-    line-height: 3rem;
-    padding:0;
-    margin:0;
+ 
+  
 }
 
 .light-mode.sidebon {
@@ -36,8 +26,9 @@ body.sidebon {
 /*--Pillars not a hamburger; This is Ancient Rome. --*/
 #pillars {
     grid-row: 2;
+    grid-column: 1;
     visibility: visible;
-    padding: 10px;
+    padding: 15px;
     margin: right;
 }
 
@@ -53,19 +44,19 @@ body.sidebon {
     background: lightgrey;
     width: 5px;
     height: 25px;
-    margin: px 0;
+    margin: 0px;
+    opacity: .7;
 }
 
 
 /*--eyeball start----------*/ 
 .switch{
-    position: sticky;
+    display:flex;
+    justify-content: flex-end;
     top:60px;
 } 
 
 .toggle {
-    text-align: right;
-    font-size: 1p
     border: 0 1 0 1;
     padding: 0px 0px 30px;
     border-color: none;
@@ -74,13 +65,10 @@ body.sidebon {
 
 .switch input {
     opacity: 0;
-    position:inherit;
 }
 
 
 #eyeball {
-    margin: left;
-    position: absolute;
     cursor: none;
     background: inherit;
     transition: 1s;
@@ -91,13 +79,8 @@ body.sidebon {
 }
 
 .light-mode #eyeball {
-    position: absolute;
-    cursor: none;
-    background: inherit;
     transition: 1s;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
     box-shadow: inset -3px 5px 0px 10px; 
 }
 /*--eyeball end----------*/ 
@@ -108,8 +91,6 @@ body.sidebon {
   color: rgb(30 30 40);
 }
 
-
-
 #Logo {
     grid-column: 2;
     grid-row: 2;
@@ -118,12 +99,8 @@ body.sidebon {
 }
 
 .light-mode #Logo {
-    grid-column: 2;
-    grid-row: 2;
-    opacity: .5;
     filter: invert(.3);
 }
-
 #Logo:hover {
     background: rgb(64 72 80);
     width: 240px;
@@ -132,9 +109,7 @@ body.sidebon {
 }
 
 .light-mode #Logo:hover {
-     background: rgb(12 10 10);
-    width: 240px;
-    height: 56px;
+    background: rgb(12 10 10);
     opacity: .9;
     
 }
@@ -142,15 +117,7 @@ body.sidebon {
 /*--Sidebar Start----------*/
 #Sidebar {
     visibility:hidden;
-    grid-column: 2;
-    grid-row: 3;
-    opacity:0;
     font-size: .8rem;
-    
-}
-
-.sidebon #Sidebar {
-    visibility: visible;
     padding-top: 1px;
     padding-right: 40px;
     grid-column: 2;
@@ -161,14 +128,16 @@ body.sidebon {
     text-align: right;
 }
 
+.sidebon #Sidebar {
+    visibility: visible;
+}
+
 
 #Sidebar ul{
     list-style-type: none;
     padding: 30px 0px 60px 40px;
     letter-spacing: 2px;
     border:0;
-    
-
 }
 
 #Sidebar li:hover{

@@ -1,15 +1,15 @@
 
 body {
     display: grid;
-    grid-template-columns: [left-side]1fr [sidebar].8fr [content-col]1.3fr [right-side]1fr;
+    grid-template-columns: [left-side]1fr[sidebar]200px [content-col]350px [right-side]1fr;
     grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
     grid-gap:5px 10px;
     
     color:lightgrey;
     background-color:#4a525a;
     font-family:sans-serif;
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: .8rem;
+    line-height: 1.3rem;
     padding:0;
     margin:0;
 } 
@@ -20,8 +20,8 @@ body {
 
 /*--eyeball start----------*/ 
 .switch{
- 
-    position: sticky;
+    display:flex;
+    justify-content: flex-end;
     top:60px;
 } 
 
@@ -52,7 +52,6 @@ body {
 }
 
 .light-mode #eyeball {
-    position: absolute;
     cursor: none;
     background: inherit;
     transition: 1s;
@@ -185,8 +184,8 @@ h4 {
 h2 {
     padding: 2px 2px 0px 2px;
     font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Georgia, serif;
-    font-size: 1.8rem;
-    line-height: 1.8em;
+    font-size: 1.2rem;
+    line-height: 1.4em;
     width: fit-content;
   
 
