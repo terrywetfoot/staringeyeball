@@ -1,22 +1,29 @@
 body {
     display: grid;
     grid-template-columns: [left-side]auto [sidebar]0px [content-col]1fr [right-side]auto;
-    grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr [footer] 100px;
-    grid-gap:5px 10px;
+    grid-template-rows:[header-headspace]20px [header]100px [content-row]1fr[footer] 100px;
+    grid-gap:2px 4px;
     
     color:lightgrey;
     background-color:#4a525a;
     font-family:sans-serif;
-    font-size: 1.4rem;
-    line-height: 3rem;
     padding:0;
     margin:0;
 } 
 
 body.sidebon {
-    grid-template-columns: [left-side]auto [sidebar].4fr [content-col]1fr [right-side]auto;
- 
-  
+    display: grid;
+    grid-template-columns: [left-side]10% [sidebar]1fr [content-col]0px [right-side]10%
+    grid-template-rows:[header-headspace]10px [header]10px [content-row].1fr [footer] auto;
+    grid-gap:2px 4px;
+    
+    color:lightgrey;
+    background-color:black;
+    font-family:sans-serif;
+    font-size: 0rem;
+    line-height: 0rem;
+    padding:0;
+    margin:0;
 }
 
 .light-mode.sidebon {
@@ -51,22 +58,8 @@ body.sidebon {
 
 /*--eyeball start----------*/ 
 .switch{
-    display:flex;
-    justify-content: flex-end;
-    top:60px;
-} 
-
-.toggle {
-    border: 0 1 0 1;
-    padding: 0px 0px 30px;
-    border-color: none;
     
-}
-
-.switch input {
-    opacity: 0;
-}
-
+} 
 
 #eyeball {
     cursor: none;
@@ -95,7 +88,6 @@ body.sidebon {
     grid-column: 2;
     grid-row: 2;
     opacity: .5;
-    align-content: left;
 }
 
 .light-mode #Logo {
@@ -125,13 +117,8 @@ body.sidebon {
     opacity:.9;
     border: 0;
     word-wrap: break-word;
-    text-align: right;
+    text-align: center;
 }
-
-.sidebon #Sidebar {
-    visibility: visible;
-}
-
 
 #Sidebar ul{
     list-style-type: none;
@@ -158,7 +145,6 @@ h2:hover {
     width: fit-content;
 }
 
-
 #Cicero:hover {
     transform:scale(1.01);
     opacity:.5;
@@ -175,54 +161,128 @@ h2:hover {
     color: darkgrey;
     margin: 0;
 }
-/*--Sidebar End----------*/
 
-/*--Main Content Start----------*/
-#Content{
-    grid-column: 3;
-    grid-row: 3;
-    font-size:1.5rem;
+
+/*--Sidebar toggle ---------------------------------------------------------------------------------------*/
+
+.sidebon #Sidebar {
+    visibility: visible;
+    grid-column-start: left-side;
+    grid-column-end: right-side;
+    grid-row-start: content-row;
+    grid-row-end: footer;
+    padding: 0px;
+    
+    display: grid;
+    grid-template-rows: 32px 1fr 30px;
+    grid-template-columns: auto 250px auto;
+}
+.sidebon #Sidebar p {
+    grid-area: 3/2;
+    display:flex;
+    justify-content: space-around;
+}
+.sidebon .menu {
+    grid-area: 2 / 2;
+    line-height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    font-size: 1.5rem;
+}
+
+.sidebon #Sidebar ul{
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 2px;
+    border:0;
+}
+
+.sidebon #Cicero {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    height: 0px;
+    visibility: hidden;
+}
+.sidebon #Quote {
+    visibility: hidden;
+}
+
+.sidebon #Logo {
+    grid-column: 1;
+    padding-left: 64px;
+    
     
 }
 
+.sidebon #Content{
+    grid-area: 1 / 1;
+    visibility: hidden;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.sidebon .switch {
+    grid-area: 1/1;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 13px
+}
+
+
+/*--Sidebar End------------*/
+
+/*--Main Content Start-----*/
+#Content{
+    grid-area: 3 / 3;
+}
+
+#Content p {
+    font-size:1.2rem;
+    line-height: 1.9rem;
+}
+
+.sidebon #Content p {
+    font-size: 0px;
+    line-height: 0px;
+}
+
 .Story {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 h4 {
     color:darkgrey;  
-    font-size: .8rem
+    font-size: .8rem;
+    margin: 10px 0px;
 }
 
 .light-mode h4 {
     color:black;  
-    font-size: .8rem
+    font-size: .8rem;
 }
-
 
 h2 {
     padding: 2px 2px 0px 2px;
     font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Georgia, serif;
-    font-size: 1.8rem;
-    line-height: 1.8em;
+    font-size: 1.3rem;
+    
     width: fit-content;
-  
-
     letter-spacing: .15em;
     text-transform: uppercase;
     font-weight: normal;
+    margin: 10px 0px;
 }
 
-p {
-    margin: 0 0 1.6em 0;
-    padding: 0;
-    
-}
-/*--Main Content End----------*/
+/*--Main Content End-------*/
 
 .Footer {
     grid-column: 3;
     grid-row: 4;
-
     font-size: 1rem;
+}
+
+.sidebon .Footer {
+    visibility: hidden;
 }

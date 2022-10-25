@@ -16,11 +16,14 @@ function cMode() {
 
 //Turns the button into an object
 const pill = document.getElementById("pillars");
+const eyeLogo = document.getElementById("Logo");
 
 //Makes the button clickable and triggers the toggle
 pill.addEventListener("click", toggleSideBar);
+eyeLogo.addEventListener("click", toggleSideBar);
 
-//The toggle for side-bar-on CSS
+
+//The toggle for sidebon CSS
 function toggleSideBar() {
     document.body.classList.toggle("sidebon");
 }
